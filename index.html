@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    
+    <main role="main" class="pb-3" style="margin-top:4rem;">
+        <h1 style="
+        margin-top: 7rem;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;">
+           Organize Event
+        </h1>
+        <ul style="list-style:none;display:flex;margin-bottom=125px" class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button style="border-radius: 10px;
+        font-weight: 700;
+        background-color: #3742fa;
+        width: 100px;
+        margin-right: 20px;
+        height: 45px;
+        color: #ffff;" class="nav-link active" id="week1-tab" data-bs-toggle="tab" data-bs-target="#week1-content"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">WEEK 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button style="border-radius: 10px;
+        font-weight: 700;
+        background-color: #3742fa;
+        width: 100px;
+        margin-right: 20px;
+        height: 45px;
+        color: #ffff;" class="nav-link" id="week2-tab" data-bs-toggle="tab" data-bs-target="#week2-content"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">WEEK 2</button>
+            </li>
+        </ul>
+        <style type="text/css">
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+
+            table {
+                margin: 20px 0;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            thead {
+                height: 50px;
+                background-color: skyblue;
+            }
+        </style>
+        <form method="POST">
+            <input type="hidden" name="CurrFieldId" value="1" />
+            <div class="tab-content">
+                <!-- WEEK 1 -->
+                <div id="week1-content" class="tab-pane fade show active" role="tabpanel" aria-labelledby="week1-tab"
+                    tabindex="0">
+                    <table class="table text-center" style="border:1px solid black">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th>
+                                    Monday, 18/7
+                                </th>
+                                <th>
+                                    Tuesday, 19/7
+                                </th>
+                                <th>
+                                    Wednesday, 20/7
+                                </th>
+                                <th>
+                                    Thursday, 21/7
+                                </th>
+                                <th>
+                                    Friday, 15/7
+                                </th>
+                                <th>
+                                    Saturday, 16/7
+                                </th>
+                                <th>
+                                    Sunday, 17/7
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    Slot 1
+                                    (6:00 AM - 7:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td class="bg-danger">
+                                    Booked!
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="24" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="36" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="48" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="60" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="72" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 2
+                                    (7:00 AM - 8:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="13" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="25" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="37" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="49" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="61" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="73" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 3
+                                    (8:00 AM - 9:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="14" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="26" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="38" name="ChosenSlots" />
+                                </td>
+                                <td class="bg-success">
+                                    Already Booked By You!
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="62" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="74" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 4
+                                    (9:00 AM - 10:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="15" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="27" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="39" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="51" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="63" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="75" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 5
+                                    (10:00 AM - 11:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="16" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="28" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="40" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="52" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="64" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="76" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 6
+                                    (11:00 AM - 12:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="17" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="29" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="41" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="53" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="65" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="77" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 7
+                                    (12:00 PM - 1:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="18" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="30" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="42" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="54" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="66" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="78" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 8
+                                    (1:00 PM - 2:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="19" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="31" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="43" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="55" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="67" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="79" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 9
+                                    (2:00 PM - 3:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="20" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="32" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="44" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="56" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="68" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="80" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 10
+                                    (3:00 PM - 4:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="21" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="33" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="45" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="57" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="69" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="81" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 11
+                                    (4:00 PM - 5:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="22" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="34" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="46" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="58" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="70" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="82" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 12
+                                    (5:00 PM - 6:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td class="bg-secondary" style="background:#8395a7">
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="23" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="35" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="47" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="59" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="71" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="83" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- WEEK 2 -->
+                <div id="week2-content" class="tab-pane fade" role="tabpanel" aria-labelledby="week1-tab" tabindex="0">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th>
+                                    Friday, 22/7
+                                </th>
+                                <th>
+                                    Saturday, 23/7
+                                </th>
+                                <th>
+                                    Sunday, 24/7
+                                </th>
+                                <th>
+                                    Monday, 25/7
+                                </th>
+                                <th>
+                                    Tuesday, 26/7
+                                </th>
+                                <th>
+                                    Wednesday, 27/7
+                                </th>
+                                <th>
+                                    Thursday, 28/7
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    Slot 1
+                                    (6:00 AM - 7:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="84" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="96" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="108" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="120" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="132" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="144" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="156" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 2
+                                    (7:00 AM - 8:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="85" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="97" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="109" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="121" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="133" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="145" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="157" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 3
+                                    (8:00 AM - 9:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="86" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="98" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="110" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="122" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="134" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="146" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="158" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 4
+                                    (9:00 AM - 10:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="87" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="99" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="111" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="123" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="135" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="147" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="159" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 5
+                                    (10:00 AM - 11:00 AM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="88" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="100" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="112" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="124" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="136" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="148" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="160" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 6
+                                    (11:00 AM - 12:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="89" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="101" name="ChosenSlots" />
+                                </td>
+                                <td class="bg-warning" style="background-color:#d63031">
+                                    Pending Approved
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="125" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="137" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="149" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="161" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 7
+                                    (12:00 PM - 1:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="90" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="102" name="ChosenSlots" />
+                                </td>
+                                <td class="bg-warning" style="background-color:#d63031">
+                                    Pending Approved
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="126" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="138" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="150" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="162" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 8
+                                    (1:00 PM - 2:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="91" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="103" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="115" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="127" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="139" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="151" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="163" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 9
+                                    (2:00 PM - 3:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="92" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="104" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="116" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="128" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="140" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="152" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="164" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 10
+                                    (3:00 PM - 4:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="93" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="105" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="117" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="129" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="141" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="153" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="165" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 11
+                                    (4:00 PM - 5:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="94" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="106" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="118" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="130" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="142" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="154" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="166" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Slot 12
+                                    (5:00 PM - 6:00 PM)
+                                </th>
+                                <!-- 7 days a week -->
+                                <td>
+                                    <input type="checkbox" value="95" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="107" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="119" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="131" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="143" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="155" name="ChosenSlots" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="167" name="ChosenSlots" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
